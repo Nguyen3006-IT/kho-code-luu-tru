@@ -1,7 +1,7 @@
  # ngôn ngữ Python
  # dòng chữ màu vô hạng
  
- import random
+import random
 import datetime
 import time
 
