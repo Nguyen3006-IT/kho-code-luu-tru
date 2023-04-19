@@ -7,13 +7,91 @@
         "editor.formatOnType": true
     },
     "workbench.colorTheme": "JellyFish-x-Retro", //theme màu tím (có thể lên gõ "theme vscode")
-    "editor.fontFamily": "Cascadia Code", //style chữ như macOS
-    "editor.lineHeight": 25, //các dòng chữ cách nhau như thế nào 
-    "editor.letterSpacing": 0.75, //các chữ cách nhau 
+    "editor.fontFamily": "Cascadia code, 'Courier New', monospace", //style chữ như macOS
+    "editor.lineHeight": 27, //các dòng chữ cách nhau như thế nào 
+    "editor.letterSpacing": 1, //các chữ cách nhau 
     "editor.fontSize": 15, //size chữ
     "editor.fontWeight": "normal", 
-    "editor.fontLigatures": true,
-    "editor.tokenColorCustomizations": {
+    "editor.fontLigatures": true, // kí hiệu các dấu toán tử 
+    "terminal.integrated.fontFamily": "Cascadia Mono, 'Courier New', monospaces",
+    "workbench.iconTheme": "dobri-simple-icons",  
+    "redhat.telemetry.enabled": true , 
 
+    "editor.tokenColorCustomizations": {
+        // nhập theme và chỉ định dạng text của theme 
+        "[JellyFish-x-Retro]": {
+            // chỉnh màu text 
+             "textMateRules": [
+                {
+                    "scope": "keyword.control", //scope này là định dạng của foreground (ấn ctrl + shift + p để xem)
+                    "settings": {
+                        // foreground là màu chữ
+                        "foreground": "#00FBBE",
+                        // fontstyle là style chữ (ví dụ: đậm là bold, nghiên là italic)
+                        "fontStyle": "italic bold"
+                    }
+                },
+                {
+                    "scope": "storage.type",
+                    "settings": {
+                        "foreground": "#fba300",
+                        "fontStyle": "italic bold"
+                    }
+                },
+                {
+                    "scope": "meta.function-call",
+                    "settings": {
+                        "foreground": "#33a4fa",
+                        "fontStyle": "bold"  // giúp tất cả chữ có màu thành style 'Bold'
+                    }
+                },
+                {
+                    "scope": "constant.numeric",
+                    "settings": {
+                        "foreground": "#fcac7e"
+                    }
+                },
+                {
+                    "scope": "source.json meta.structure.dictionary.json support.type.property-name.json",
+                    "settings": {
+                        "foreground": "#5aa8f6"
+                    }
+                },
+                /* {
+                    "scope": ["comment","punctuation.definition.comment"],
+                    "settings": {
+                        "foreground": "#9a63ffa7",
+                        "fontStyle": "",
+                    }
+                }, */ 
+                {
+                    "scope": "variable.other.global.cpp",
+                    "settings": {
+                        "foreground": "#e983fb",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "scope": ["keyword","storage.modifier"],
+                    "settings": {
+                        "foreground": "#fe7d7d"
+                    }
+                },
+                {
+                    "scope": ["entity.name.function","variable.function","support.function"],
+                    "settings": {
+                        "foreground": "#00ffff"
+                    }
+                },
+                {
+                    "scope": ["variable","string constant.other.placeholder"],
+                    "settings": {
+                        "foreground": "#FF7EDB"
+                    }
+                }
+            ]
+        }
     }
+
+
 }
