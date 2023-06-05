@@ -5,25 +5,24 @@
     "liveServer.settings.CustomBrowser": "chrome",
     "[python]": {
         "editor.formatOnType": true
-    },
-    "workbench.colorTheme": "JellyFish-x-Retro", //theme màu tím (có thể lên gõ "theme vscode")
-    "editor.fontFamily": "Cascadia code, 'Courier New', monospace", //style chữ như macOS (có thể dùng JetBrains Mono ExtraBold -> tải)
+    }, //theme màu tím (có thể lên gõ "theme vscode")
+    "editor.fontFamily": "JetBrains Mono ExtraBold, SF Mono, 'Courier New', Arial, Helvetica, sans-serif, monospace", //style chữ như macOS
     "editor.lineHeight": 27, //các dòng chữ cách nhau như thế nào 
-    "editor.letterSpacing": 1, //các chữ cách nhau 
-    "editor.fontSize": 15, //size chữ
+    "editor.letterSpacing": 1.5, //các chữ cách nhau 
+    "editor.fontSize": 14.5, //size chữ
     "editor.fontWeight": "normal", 
-    "editor.fontLigatures": true, // kí hiệu các dấu toán tử 
+    "editor.fontLigatures": true, // kí hiệu các dấu toán tử như toán học (>=, <=, <->)
     "terminal.integrated.fontFamily": "Cascadia Mono, 'Courier New', monospaces",
-    "workbench.iconTheme": "dobri-simple-icons",  
+    
     "redhat.telemetry.enabled": true , 
 
     "editor.tokenColorCustomizations": {
-        // nhập theme và chỉ định dạng text của theme 
-        "[JellyFish-x-Retro]": {
+        // tên theme muốn mod
+        "[Pretty Purple]": {
             // chỉnh màu text 
              "textMateRules": [
                 {
-                    "scope": "keyword.control", //scope này là định dạng của foreground (ấn ctrl + shift + p để xem)
+                    "scope": "keyword.control",
                     "settings": {
                         // foreground là màu chữ
                         "foreground": "#00FBBE",
@@ -35,52 +34,55 @@
                     "scope": "storage.type",
                     "settings": {
                         "foreground": "#fba300",
-                        "fontStyle": "italic bold"
+                        "fontStyle": "bold"
                     }
                 },
                 {
                     "scope": "meta.function-call",
                     "settings": {
-                        "foreground": "#33a4fa",
+                        "foreground": "#be33fa", //#338cfa (màu xanh)
                         "fontStyle": "bold"  // giúp tất cả chữ có màu thành style 'Bold'
                     }
                 },
                 {
                     "scope": "constant.numeric",
                     "settings": {
-                        "foreground": "#fcac7e"
+                        "foreground": "#35dbfc",
+                        "fontStyle": "bold"
                     }
                 },
                 {
                     "scope": "source.json meta.structure.dictionary.json support.type.property-name.json",
                     "settings": {
-                        "foreground": "#5aa8f6"
+                        "foreground": "#459ef7"
                     }
                 },
                 /* {
                     "scope": ["comment","punctuation.definition.comment"],
                     "settings": {
-                        "foreground": "#9a63ffa7",
+                        "foreground": "#a57cf2",
                         "fontStyle": "",
                     }
-                }, */ 
+                },  */
                 {
                     "scope": "variable.other.global.cpp",
                     "settings": {
-                        "foreground": "#e983fb",
+                        "foreground": "#c6a6ff",
                         "fontStyle": "bold"
                     }
                 },
                 {
                     "scope": ["keyword","storage.modifier"],
                     "settings": {
-                        "foreground": "#fe7d7d"
+                        "foreground": "#fc4d4d",
+                        "fontStyle": "bold"
                     }
                 },
                 {
-                    "scope": ["entity.name.function","variable.function","support.function"],
+                    "scope": ["entity.name.function","variable.function","support.function",],
                     "settings": {
-                        "foreground": "#00ffff"
+                        "foreground": "#00ffff",
+                        "fontStyle": "bold"
                     }
                 },
                 {
@@ -88,10 +90,14 @@
                     "settings": {
                         "foreground": "#FF7EDB"
                     }
-                }
+                },
+                /* {
+                    "scope": "variable.parameter",
+                    "settings": {
+                        "foreground": "#ff00a6",
+                        "fontStyle": "bold"
+                    }
+                } */
             ]
         }
-    }
-
-
-}
+    },
